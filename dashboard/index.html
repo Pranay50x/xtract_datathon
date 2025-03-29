@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Reading Journeys Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-book-reader"></i>
+            <h2>Library<span>Insights</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#overview"><i class="fas fa-home"></i> Overview</a></li>
+                <li><a href="#subject-popularity"><i class="fas fa-chart-bar"></i> Subject Popularity</a></li>
+                <li><a href="#reading-journeys"><i class="fas fa-route"></i> Reading Journeys</a></li>
+                <li><a href="#patron-analysis"><i class="fas fa-users"></i> Patron Analysis</a></li>
+                <li><a href="#temporal-patterns"><i class="fas fa-clock"></i> Temporal Patterns</a></li>
+                <li><a href="#community-engagement"><i class="fas fa-hands-helping"></i> Community Engagement</a></li>
+                <li><a href="#recommendations"><i class="fas fa-lightbulb"></i> Recommendations</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Created: March 2025</p>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <div class="header-content">
+                <h1>Library Reading Journeys Dashboard</h1>
+                <p>Circulation Data Analysis: January - June 2024</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-export"><i class="fas fa-download"></i> Export Report</button>
+            </div>
+        </header>
+
+        <section id="overview" class="dashboard-section">
+            <h2>Overview</h2>
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                    <div class="stat-details">
+                        <h3>Total Circulations</h3>
+                        <p class="stat-value">14,562</p>
+                        <p class="stat-change positive">+12% from previous period</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-details">
+                        <h3>Active Patrons</h3>
+                        <p class="stat-value">3,241</p>
+                        <p class="stat-change positive">+8% from previous period</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="stat-details">
+                        <h3>Top Subject</h3>
+                        <p class="stat-value">Computer Science</p>
+                        <p class="stat-change">24% of all checkouts</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-details">
+                        <h3>Peak Activity</h3>
+                        <p class="stat-value">Tuesday 10-12</p>
+                        <p class="stat-change">18% of all transactions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kpi-summary">
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>Computer Science, Engineering, and Mathematics remain the most popular subjects across all departments</li>
+                    <li>Reading patterns show strong transitions between related technical subjects</li>
+                    <li>Weekend borrowing focused on diverse subjects compared to weekday technical focus</li>
+                    <li>CSE and ME departments show highest interdisciplinary reading patterns</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="subject-popularity" class="dashboard-section">
+            <h2>Subject Popularity</h2>
+            <div class="insight-container">
+                <div class="chart-card large">
+                    <h3>Top Books by Subject</h3>
+                    <div class="chart-container">
+                        <div class="top-books-grid">
+                            <!-- Computer Science -->
+                            <div class="subject-books">
+                                <h4>Computer Science & Programming</h4>
+                                <ol class="book-list">
+                                    <li>Programming in ANSI C (Balagurusamy E)</li>
+                                    <li>Programming in C (Thareja Reema)</li>
+                                    <li>Data Mining: Concepts and Techniques (Han, Jiawei)</li>
+                                    <li>Artificial Intelligence (Russell Stuart)</li>
+                                    <li>Operating System Concepts (Silberschatz)</li>
+                                </ol>
+                            </div>
+                            <!-- Mathematics -->
+                            <div class="subject-books">
+                                <h4>Mathematics</h4>
+                                <ol class="book-list">
+                                    <li>Higher Engineering Mathematics (Grewal B S)</li>
+                                    <li>Calculus and Linear Algebra (Chandrashekar K S)</li>
+                                    <li>Advanced Calculus and Numerical Methods</li>
+                                    <li>Discrete Mathematics and Its Applications</li>
+                                    <li>Engineering Mathematics</li>
+                                </ol>
+                            </div>
+                            <!-- Engineering -->
+                            <div class="subject-books">
+                                <h4>Engineering</h4>
+                                <ol class="book-list">
+                                    <li>Engineering Drawing Vol.2 (Gopalakrishna K R)</li>
+                                    <li>Elements of Civil Engineering (Prakash, Shesha M N)</li>
+                                    <li>Engineering Chemistry (Gadag R V)</li>
+                                    <li>Digital Design with Verilog HDL (Mano)</li>
+                                    <li>Mechanical Measurement & Metrology</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-insights">
+                        <p>The most frequently borrowed titles within top subjects show clear curriculum alignment and high demand for foundational textbooks across disciplines.</p>
+                    </div>
+                </div>
+                
+                <!-- Keep the other two existing chart cards -->
+                <div class="chart-card">
+                    <h3>Overall Subject Ranking</h3>
+                    <div class="chart-container">
+                        <img src="../plots/subject_popularity/overall_ranking.png" alt="Overall Subject Ranking">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Technical subjects dominate library circulation, with Computer Science accounting for nearly a quarter of all checkouts.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Subject Popularity by Day</h3>
+                    <div class="chart-container">
+                        <img src="../plots/subject_popularity/day_of_week.png" alt="Subject Popularity by Day">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Weekday borrowing focuses on curriculum materials, while weekend checkouts show more diverse subject interests.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-actions">
+                <button class="btn-action"><i class="fas fa-list"></i> View Detailed Subject Report</button>
+            </div>
+        </section>
+
+        <section id="reading-journeys" class="dashboard-section">
+            <h2>Reading Journeys</h2>
+            <div class="insight-container">
+                <div class="chart-card">
+                    <h3>Subject Transitions</h3>
+                    <div class="chart-container">
+                        <img src="../plots/reading_journeys/transition_heatmap.png" alt="Reading Journey Transitions">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Strong transitions exist between Computer Science and Mathematics, suggesting interdisciplinary learning paths among technical students.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Transition Probabilities</h3>
+                    <div class="chart-container">
+                        <img src="../plots/reading_journeys/transition_probabilities.png" alt="Reading Journey Probabilities">
+                    </div>
+                    <div class="chart-insights">
+                        <p>32% of Computer Science readers next move to Mathematics, while 23% of Mathematics readers transition to Computer Science.</p>
+                    </div>
+                </div>
+                <div class="chart-card large">
+                    <h3>Common Reading Paths</h3>
+                    <div class="chart-container">
+                        <img src="../plots/reading_journeys/common_paths.png" alt="Common Reading Paths">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Three-step reading journeys show clear academic progression patterns through related subjects, providing insight for collection development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-box">
+                <h3><i class="fas fa-lightbulb"></i> Reading Path Applications</h3>
+                <p>Consider creating curated "reading journey" displays that guide patrons through common subject transitions. For example, "From Programming to Mathematics" could showcase materials that bridge these related disciplines.</p>
+            </div>
+        </section>
+
+        <section id="patron-analysis" class="dashboard-section">
+            <h2>Patron Analysis</h2>
+            <div class="insight-container">
+                <div class="chart-card large">
+                    <h3>Department Reading Preferences</h3>
+                    <div class="chart-container">
+                        <img src="../plots/patron_analysis/department_interests.png" alt="Department Interests">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Different departments show distinct reading preferences, with some surprising cross-disciplinary interests.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>User Type Preferences</h3>
+                    <div class="chart-container">
+                        <img src="../plots/patron_analysis/user_type_interests.png" alt="User Type Interests">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Undergraduate students focus primarily on curriculum materials, while postgraduate and staff readers show more diverse interests.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Reading Diversity by Department</h3>
+                    <div class="chart-container">
+                        <img src="../plots/patron_analysis/department_diversity.png" alt="Department Diversity">
+                    </div>
+                    <div class="chart-insights">
+                        <p>CSE and ME departments show highest diversity in reading subjects, suggesting interdisciplinary approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="temporal-patterns" class="dashboard-section">
+            <h2>Temporal Patterns</h2>
+            <div class="insight-container">
+                <div class="chart-card">
+                    <h3>Daily Checkout Patterns</h3>
+                    <div class="chart-container">
+                        <img src="../plots/temporal_patterns/day_hour_heatmap.png" alt="Day and Hour Heatmap">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Highest library activity occurs on weekdays between 10:00-14:00, with distinct patterns by day of week.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Hourly Subject Trends</h3>
+                    <div class="chart-container">
+                        <img src="../plots/temporal_patterns/hourly_trends.png" alt="Hourly Subject Trends">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Different subjects show varying popularity throughout the day, with technical subjects peaking in mid-morning.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Monthly Trends</h3>
+                    <div class="chart-container">
+                        <img src="../plots/temporal_patterns/monthly_trends.png" alt="Monthly Trends">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Subject interest varies seasonally throughout the academic term, reflecting curriculum schedules.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Weekly Patterns</h3>
+                    <div class="chart-container">
+                        <img src="../plots/temporal_patterns/weekly_trends.png" alt="Weekly Trends">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Week-by-week analysis shows clear patterns around assessment periods and term structures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-box">
+                <h3><i class="fas fa-lightbulb"></i> Staffing & Hours Recommendation</h3>
+                <p>Consider adjusting staffing levels to match peak activity times. Tuesday and Wednesday mornings consistently show highest transaction volumes and may benefit from additional help desk support.</p>
+            </div>
+        </section>
+
+        <section id="community-engagement" class="dashboard-section">
+            <h2>Community Engagement</h2>
+            <div class="insight-container">
+                <div class="chart-card">
+                    <h3>Optimal Event Times</h3>
+                    <div class="chart-container">
+                        <img src="../plots/community_engagement/optimal_event_times.png" alt="Optimal Event Times">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Based on library activity patterns, the best times for community events are Tuesday-Thursday afternoons when patrons are already present.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Book Club Topics</h3>
+                    <div class="chart-container">
+                        <img src="../plots/community_engagement/book_club_topics.png" alt="Book Club Topics">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Subject combinations that are frequently borrowed together suggest natural topics for reading groups and book clubs.</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Subject Utilization</h3>
+                    <div class="chart-container">
+                        <img src="../plots/community_engagement/subject_utilization.png" alt="Subject Utilization">
+                    </div>
+                    <div class="chart-insights">
+                        <p>Some subjects show lower utilization relative to collection size, indicating opportunities for promotion or collection adjustment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="engagement-ideas">
+                <h3>Engagement Opportunities</h3>
+                <div class="idea-cards">
+                    <div class="idea-card">
+                        <div class="idea-icon"><i class="fas fa-users"></i></div>
+                        <h4>Reading Paths Programme</h4>
+                        <p>Create guided reading challenges based on common subject transitions, with completion incentives.</p>
+                    </div>
+                    <div class="idea-card">
+                        <div class="idea-icon"><i class="fas fa-comments"></i></div>
+                        <h4>Cross-Disciplinary Book Clubs</h4>
+                        <p>Establish discussion groups focusing on popular subject combinations like "Computer Science & Mathematics".</p>
+                    </div>
+                    <div class="idea-card">
+                        <div class="idea-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Department Workshops</h4>
+                        <p>Host department-specific workshops aligned with their unique reading interests and patterns.</p>
+                    </div>
+                    <div class="idea-card">
+                        <div class="idea-icon"><i class="fas fa-map-signs"></i></div>
+                        <h4>Subject Journey Maps</h4>
+                        <p>Create visual guides that show how different subjects connect and common reading pathways.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="dashboard-section">
+            <h2>Strategic Recommendations</h2>
+            <div class="recommendations-container">
+                <div class="recommendation-card">
+                    <div class="recommendation-icon"><i class="fas fa-book-reader"></i></div>
+                    <div class="recommendation-content">
+                        <h3>Reading Journey Displays</h3>
+                        <p>Create physical and digital displays that showcase common reading paths, helping patrons discover related materials. For example, a "From Programming to Mathematics" display could guide Computer Science students toward relevant mathematical texts.</p>
+                        <div class="implementation">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Identify 3-5 common reading journeys from data</li>
+                                <li>Create visual pathway displays with featured books</li>
+                                <li>Include QR codes linking to full reading lists</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="recommendation-content">
+                        <h3>Schedule-Optimized Programming</h3>
+                        <p>Align events and workshops with documented patron activity patterns. Host technical workshops during peak Computer Science borrowing periods and position interdisciplinary events during times when diverse reading is more common.</p>
+                        <div class="implementation">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Programming workshops in January-February (peak CS interest)</li>
+                                <li>Ethics/professional development sessions in March-April</li>
+                                <li>Schedule events Tuesday-Thursday when activity is highest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-icon"><i class="fas fa-users"></i></div>
+                    <div class="recommendation-content">
+                        <h3>Department-Specific Outreach</h3>
+                        <p>Develop tailored services and collections for departments based on their unique reading profiles. Target CSE and ME departments for interdisciplinary collection development given their diverse reading patterns.</p>
+                        <div class="implementation">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Create department-specific reading lists based on historical patterns</li>
+                                <li>Host department reading showcases featuring unexpected interests</li>
+                                <li>Partner with departments showing high reading diversity for special collections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="recommendation-content">
+                        <h3>Collection Development Strategy</h3>
+                        <p>Refine acquisition policies based on utilization patterns and reading journeys. Focus on strengthening identified pathways and addressing underutilized subjects through targeted promotion or adjustment.</p>
+                        <div class="implementation">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Increase holdings in high-transition areas (CS→Math, Engineering→Physics)</li>
+                                <li>Review underutilized collections for currency and appeal</li>
+                                <li>Develop bridge materials for common subject transitions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
